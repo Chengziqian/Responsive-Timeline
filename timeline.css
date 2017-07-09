@@ -1,0 +1,242 @@
+html {
+    font-size: 100%;
+    min-width: 340px;
+}
+body {
+  background-color: #e9f0f5;
+  overflow:scroll;
+}
+h2 {
+  font-size: 1.25rem;
+}
+p, a, span {
+  font-size: 1rem;
+}
+.tl-container {
+  margin: 20px 30px;
+  position: relative;
+}
+.tl-container::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 4px;
+  height: 100%;
+  background-color: #d7e4ed;
+}
+.tl-block {
+  position: relative;
+  height: auto;
+  margin-bottom: 35px;
+}
+.tl-image {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin-left: -23px;
+  left: 50%;
+  top: 0;
+}
+.tl-content {
+  position: relative;
+  width: 45%;
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0 3px 0 #d7e4ed;
+}
+.tl-block:first-child {
+  margin: 35px 0;
+}
+.tl-content::before {
+  content: "";
+  position: absolute;
+  left: 100%;
+  top: 16px;
+  height: 0;
+  width: 0;
+  border: 7px solid transparent;
+  border-left: 7px solid white;
+}
+.tl-content::after{
+  content: "";
+  clear: both;
+}
+.tl-block::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+.tl-content a {
+  background-color: #acb7c0;
+  color: white;
+  padding: 8px 10px;
+  display: inline-block;
+  outline: none;
+  text-decoration: none;
+}
+.tl-content a:hover {
+  background-color: black;
+}
+.tl-content .time {
+  position: absolute;
+  color: #7f8c97;
+  left: 115%;
+  width: 100%;
+  top: 14px;
+}
+.blue {
+  background-color: #1e88e5;
+}
+.purple {
+  background-color: #7e57c2;
+}
+.red {
+  background-color: #ef5350;
+}
+.green {
+  background-color: #66bb6a;
+}
+.orange {
+  background-color: #ff7043;
+}
+.pass {
+  box-shadow: 0 0 0 4px #bdbdbd;
+}
+.now {
+  box-shadow: 0 0 0 4px #00e676;
+}
+.tl-block:nth-child(even) .tl-content {
+  float: right;
+}
+.tl-block:nth-child(even) .tl-content::before {
+  content: "";
+  position: absolute;
+  left: auto;
+  right: 100%;
+  top: 16px;
+  height: 0;
+  width: 0;
+  border: 7px solid transparent;
+  border-right: 7px solid white;
+}
+.tl-block:nth-child(even) .tl-content .time {
+  position: absolute;
+  color: #7f8c97;
+  right: 28%;
+  left: auto;
+  width: 100%;
+  top: 14px;
+}
+
+
+
+@media screen and (max-width:1500px) {
+  .tl-container::before {
+    content: "";
+    position: absolute;
+    left: 18px;
+    width: 4px;
+    height: 100%;
+    background-color: #d7e4ed;
+  }
+  .tl-image {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-left: -23px;
+    left: 18px;
+    top: 0;
+  }
+  .tl-content {
+    float: right;
+    position: relative;
+    width: auto;
+    margin-left: 65px;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0 3px 0 #d7e4ed;
+  }
+  .tl-content::before {
+    content: "";
+    position: absolute;
+    right: 100%;
+    left: auto;
+    top: 19px;
+    height: 0;
+    width: 0;
+    border: 7px solid transparent;
+    border-right: 7px solid white;
+  }
+  .tl-block:nth-child(even) .tl-content::before {
+    content: "";
+    position: absolute;
+    left: auto;
+    right: 100%;
+    top: 19px;
+    height: 0;
+    width: 0;
+    border: 7px solid transparent;
+    border-right: 7px solid white;
+  }
+
+  .tl-content .time, .tl-block:nth-child(even) .tl-content .time {
+    float: left;
+    position: absolute;
+    color: #7f8c97;
+    display: inline-block;
+    left: auto;
+    width: auto;
+    top: auto;
+    right: auto;
+  }
+  .tl-content a {
+    float: right;
+    background-color: #acb7c0;
+    color: white;
+    padding: 8px 10px;
+    display: inline-block;
+    outline: none;
+    text-decoration: none;
+  }
+}
+@media only screen and (max-width: 768px) {
+  h2 {
+    font-size: 15px;
+  }
+  a, p, span {
+    font-size: 12px;
+  }
+  .tl-image {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin-left: -13px;
+    left: 18px;
+    top: 0;
+  }
+  .tl-content::before {
+    content: "";
+    position: absolute;
+    right: 100%;
+    left: auto;
+    top: 8px;
+    height: 0;
+    width: 0;
+    border: 7px solid transparent;
+    border-right: 7px solid white;
+  }
+  .tl-block:nth-child(even) .tl-content::before {
+    content: "";
+    position: absolute;
+    left: auto;
+    right: 100%;
+    top: 8px;
+    height: 0;
+    width: 0;
+    border: 7px solid transparent;
+    border-right: 7px solid white;
+  }
+}
